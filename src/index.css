@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Space Grotesk", "Work Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Space Grotesk", ui-serif, Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Bento Grid/LuminaOS Palette (slate-950, slate-900, sky-400, emerald-400) */
+  --color-primary: #38bdf8;          /* sky-400 */
+  --color-primary-fixed: #075985;    /* sky-800 */
+  --color-primary-fixed-dim: #0284c7; /* sky-600 */
+  --color-on-primary-fixed: #f0f9ff; /* sky-50 */
+  
+  --color-secondary: #10b981;         /* emerald-500 */
+  --color-secondary-container: #064e3b; /* emerald-950 */
+  --color-on-secondary-container: #34d399; /* emerald-450 */
+  --color-secondary-fixed-dim: #059669;
+
+  --color-tertiary: #1e293b;         /* slate-800 */
+  --color-on-tertiary: #f8fafc;      /* slate-50 */
+  --color-tertiary-container: #0f172a; /* slate-900 */
+  --color-tertiary-fixed: #1e293b;   /* slate-800 */
+  --color-on-tertiary-fixed: #38bdf8; /* sky-400 */
+
+  --color-background: #020617;       /* slate-950 */
+  --color-on-background: #f1f5f9;    /* slate-100 */
+  
+  --color-surface-dim: #0b0f19;      /* slate-950 deep */
+  --color-surface-bright: #1e293b;   /* slate-800 */
+  --color-surface-container-lowest: #0f172a; /* slate-900 */
+  --color-surface-container-low: #0f172a;    /* slate-900 */
+  --color-surface-container: #1e293b;        /* slate-800 */
+  --color-surface-container-high: #334155;   /* slate-700 */
+  --color-surface-container-highest: #475569;/* slate-600 */
+  --color-on-surface: #f8fafc;                 /* slate-50 */
+  --color-on-surface-variant: #94a3b8;         /* slate-400 */
+  
+  --color-outline: #1e293b;          /* border border-slate-800 */
+  --color-outline-variant: #334155;  /* input border slate-700 */
+}
+
+/* Base resets & scrollbars optimized for dark high-contrast bento look */
+html, body {
+  background-color: #020617 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Custom bento-card animations and transitions */
+.bg-surface-container-lowest,
+.bg-surface-container-low,
+.bg-surface-container,
+.bento-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 20px !important;
+}
+
+.bg-surface-container-lowest:hover,
+.bg-surface-container-low:hover,
+.bento-card:hover {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.12) !important;
+  transform: translateY(-2px);
+}
